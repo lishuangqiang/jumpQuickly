@@ -1,7 +1,6 @@
 # Quick Jump 快捷跳转
 
 <div align="center">
-    <img src="docs/logo.png" alt="Quick Jump Logo" width="128" height="128">
     <p>一个简单而强大的 Chrome 扩展，让你可以通过自定义快捷键快速跳转到常用网站。</p>
 </div>
 
