@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Quick Jump",
+  "version": "1.0",
+  "description": "快速跳转到指定网页",
+  "permissions": [
+    "storage",
+    "tabs",
+    "commands"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "commands": {
+    "shortcut-1": {
+      "suggested_key": {
+        "default": "Alt+G"
+      },
+      "description": "执行快捷键跳转"
+    },
+    "shortcut-2": {
+      "suggested_key": {
+        "default": "Alt+B"
+      },
+      "description": "执行快捷键跳转2"
+    },
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K"
+      },
+      "description": "打开配置面板"
+    }
+  }
+}

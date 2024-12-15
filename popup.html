@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>快捷跳转配置</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 32px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+    }
+
+    h2 {
+      color: #1a1a1a;
+      font-size: 24px;
+      margin: 0 0 24px 0;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .shortcut-item {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      border: 1px solid #e9ecef;
+      transition: all 0.2s ease;
+    }
+
+    .shortcut-item:hover {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transform: translateY(-1px);
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+      transition: all 0.2s ease;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #7048e8;
+      box-shadow: 0 0 0 3px rgba(112, 72, 232, 0.1);
+    }
+
+    .button-container {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    button {
+      flex: 1;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    #add-shortcut {
+      background-color: #7048e8;
+      color: white;
+    }
+
+    #add-shortcut:hover {
+      background-color: #5f3dc4;
+    }
+
+    #save-shortcuts {
+      background-color: #7048e8;
+      color: white;
+    }
+
+    #save-shortcuts:hover {
+      background-color: #5f3dc4;
+    }
+
+    .delete-btn {
+      width: 100%;
+      margin-top: 8px;
+      background-color: #f8f9fa;
+      color: #e03131;
+      border: 1px solid #e03131;
+    }
+
+    .delete-btn:hover {
+      background-color: #fff5f5;
+    }
+
+    .description {
+      text-align: center;
+      color: #6c757d;
+      font-size: 14px;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f3f0ff;
+      border-radius: 50%;
+    }
+
+    .logo svg {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="#7048e8"/>
+      <path d="M13 7H11V13H13V7ZM13 15H11V17H13V15Z" fill="#7048e8"/>
+    </svg>
+  </div>
+  <h2>快捷跳转配置</h2>
+  <p class="description">配置你的快捷键和目标网址，按下快捷键即可快速访问对应网站。</p>
+  <div id="shortcuts-container"></div>
+  <div class="button-container">
+    <button id="add-shortcut">添加新快捷键</button>
+    <button id="save-shortcuts">保存更改</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
